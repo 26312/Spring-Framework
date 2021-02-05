@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="BeanAutoWireByName" class="com.SpringFramework.Spring_BeansAutoWiring.BeanAutoWireByName" autowire="byName" />
+	
+	<bean id="pointA" class="com.SpringFramework.Spring_BeansAutoWiring.Points">
+		<property name="X" value="1"/>
+		<property name="Y" value="2"/>
+		<property name="Z" value="3"/>
+	</bean>
+
+
+	<bean id="pointB" class="com.SpringFramework.Spring_BeansAutoWiring.Points">
+		<property name="X" value="4"/>
+		<property name="Y" value="5"/>
+		<property name="Z" value="6"/>
+	</bean>
+	
+	<bean id="pointC" class="com.SpringFramework.Spring_BeansAutoWiring.Points">
+		<property name="X" value="7"/>
+		<property name="Y" value="8"/>
+		<property name="Z" value="9"/>
+	</bean>
+
+
+
+
+
+</beans>

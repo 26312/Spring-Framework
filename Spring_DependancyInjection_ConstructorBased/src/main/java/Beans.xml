@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- <bean id="Triangle" class="com.SpringFramework.Spring_DependancyInjection_ConstructorBased.Triangle">
+		<constructor-arg value="Equilateral"/>
+		<constructor-arg value="20"/>
+	</bean> -->
+		
+	<!-- In Spring, all the 'value' under 'constructor-arg' are taken in as String -->
+	<!-- If we remove the first constructor-arg from above, it will specify the type as 20 and not Equilateral-->
+	<!-- In such cases we can make use of 'type' whose attributes should hold the data-type like int,String,float etc -->
+
+	<!-- <bean id="Triangle" class="com.SpringFramework.Spring_DependancyInjection_ConstructorBased.Triangle">
+		<constructor-arg type="java.lang.String" value="isosceles"/>
+		<constructor-arg type="int" value="50"/>
+	</bean> -->
+		
+					<!-- OR -->
+					
+	<!-- We can make use of 'index' attribute -->
+	
+	<bean id="Triangle" class="com.SpringFramework.Spring_DependancyInjection_ConstructorBased.Triangle">
+		<constructor-arg index="1" value="scalene "/>
+		<constructor-arg index="0"  value="40"/>
+	</bean>
+	<!-- In case of index attribute, do make sure that the index's value is as per the parameters passed in the Constructor -->
+</beans>

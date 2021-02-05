@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="Triangle" class="com.SpringFramework.Spring_InjectingObjects.Triangle">
+		<property name="PointA" ref="FirstPoint"/>
+		<property name="PointB" ref="SecondPoint"/>
+		<property name="PointC" ref="ThirdPoint"/>
+	
+	</bean>
+	
+	<bean id="FirstPoint" class="com.SpringFramework.Spring_InjectingObjects.Points">
+		<property name="X" value="10"/>
+		<property name="Y" value="20"/>
+		<property name="Z" value="30"/>
+	</bean>
+	
+	<bean id="SecondPoint" class="com.SpringFramework.Spring_InjectingObjects.Points">
+		<property name="X" value="40"/>
+		<property name="Y" value="50"/>
+		<property name="Z" value="60"/>
+	</bean>
+	
+	<bean id="ThirdPoint" class="com.SpringFramework.Spring_InjectingObjects.Points">
+		<property name="X" value="70"/>
+		<property name="Y" value="80"/>
+		<property name="Z" value="90"/>
+	</bean>
+
+</beans>
