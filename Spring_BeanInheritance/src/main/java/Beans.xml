@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+   
+   <bean id="HelloWorld" class="com.SPRINGFRAMEWORK.Spring_BeanInheritance.HelloWorld">
+   	<property name="message1" value="Hello World"/>
+   	<property name="message2" value="Hello to All from Spring Framework"></property>
+   </bean> 
+   
+   <!-- Bean Defination Template -->
+   <!-- When defining 'Bean Defination Template', you should not specify the class attribute. But instead specify the 
+   abstract attribute with value as 'true' as follows -->
+   
+  <!--  <bean id="HelloWorld" abstract="true">
+   	<property name="message1" value="Hello World"/>
+   	<property name="message2" value="Hello to All from Spring Framework"></property>
+   </bean> -->
+
+
+	<bean id="HelloIndia" class="com.SPRINGFRAMEWORK.Spring_BeanInheritance.HelloIndia" parent="HelloWorld">
+		<property name="message1" value="Hello India"/>
+			<property name="message3" value="Namaste from India"/>
+	</bean>
+
+</beans>
