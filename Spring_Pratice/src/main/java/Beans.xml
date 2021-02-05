@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="Triangles"  class="com.SpringFramework.Spring_Pratice.Triangles">
+		<property name="pointA" ref="FirstPoint"/>
+			<!-- For Points B -->
+			<property name="pointB">
+				<bean class="com.SpringFramework.Spring_Pratice.Points">
+					<property name="X" value="101"/>
+					<property name="Y" value="102"/>
+					<property name="Z" value="103"/>
+				</bean>
+			</property>
+			<!-- For Points C -->
+			<property name="pointC">
+				<bean class="com.SpringFramework.Spring_Pratice.Points">
+						<property name="X" value="201"/>
+						<property name="Y" value="202"/>
+						<property name="Z" value="203"/>
+				</bean>
+			</property>
+	</bean>
+	
+	<bean id="FirstPoint" class="com.SpringFramework.Spring_Pratice.Points">
+		<property name="X" value="501"/>
+		<property name="Y" value="502"/>
+		<property name="Z" value="503"/>
+	</bean>
+	
+	<alias name="Triangles" alias="newTriangles"/>
+
+</beans>
